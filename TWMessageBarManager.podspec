@@ -6,14 +6,14 @@ Pod::Spec.new do |s|
 
   s.screenshot   = "https://raw.github.com/terryworona/TWMessageBarManager/master/Screenshots/main.png"
 
-  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.license      = 'MIT'
   s.author       = { "Terry Worona" => "terryworona@gmail.com" }
   s.source       = { 
 	:git => "https://github.com/terryworona/TWMessageBarManager.git",
 	:tag => "v1.8.1"
   }
 
-  s.platform = :ios, '6.0'
+  s.platform = :ios
   s.source_files = 'Classes'
   s.resources = ["Icons/*.png"]
   s.requires_arc = true
