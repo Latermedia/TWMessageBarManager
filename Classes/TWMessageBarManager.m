@@ -533,19 +533,9 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         
         CGFloat xOffset = kTWMessageViewBarPadding;
         CGFloat yOffset = kTWMessageViewBarPadding + [self statusBarOffset];
-        
-        // icon
-        CGContextSaveGState(context);
-        {
-            if ([styleSheet respondsToSelector:@selector(iconImageForMessageType:)])
-            {
-                [[styleSheet iconImageForMessageType:self.messageType] drawInRect:CGRectMake(xOffset, yOffset, kTWMessageViewIconSize, kTWMessageViewIconSize)];
-            }
-        }
-        CGContextRestoreGState(context);
-        
+                
         yOffset -= kTWMessageViewTextOffset;
-        xOffset += kTWMessageViewIconSize + kTWMessageViewBarPadding;
+        xOffset += kTWMessageViewBarPadding;
         
         CGSize titleLabelSize = [self titleSize];
         CGSize descriptionLabelSize = [self descriptionSize];
